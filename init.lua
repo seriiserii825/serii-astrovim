@@ -53,6 +53,29 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "intelephense" --
+    },
+    config = {
+      intelephense = function()
+        return {
+          cmd = { "intelephense", "--stdio" },
+          filetypes = { "php" },
+          settings = {
+            intelephense = {
+              files = {
+                maxSize = 1000000,
+              },
+              environment = {
+                includePaths = {
+                  "/home/serii/Sites/wordpress",
+                  "/home/serii/Sites/advanced-custom-fields-pro",
+                  "/home/serii/Sites/woocommerce",
+                },
+              },
+            },
+          },
+        }
+      end,
     },
   },
   -- Configure require("lazy").setup() options
