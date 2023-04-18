@@ -91,7 +91,23 @@ return {
   plugins = {
     { "tpope/vim-fugitive", lazy = false },
     { "mattn/emmet-vim",    lazy = false },
-    { "justinmk/vim-sneak", lazy = false }
+    { "justinmk/vim-sneak", lazy = false },
+    {
+      "L3MON4D3/LuaSnip",
+      config = function(plugin, opts)
+        require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
+        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
+      end,
+      lazy = false
+    },
+  },
+  cmp = {
+    source_priority = {
+      nvim_lsp = 1000,
+      luasnip = 750,
+      buffer = 500,
+      path = 250,
+    },
   },
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so

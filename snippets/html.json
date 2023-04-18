@@ -1,0 +1,9 @@
+{
+  "pm": {
+    "prefix": ["pm"],
+    "body": [
+      "<?php $1; ?>"
+    ],
+    "description": "pm ;"
+  }
+}
