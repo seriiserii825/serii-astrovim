@@ -1,0 +1,46 @@
+{
+	"query selector": {
+		"prefix": "dqs",
+		"body": [
+			"document.querySelector('$1')"
+		],
+		"description": "document query selector"
+	},
+	"query selector all": {
+		"prefix": "dqsa",
+		"body": [
+			"document.querySelectorAll('$1')"
+		],
+		"description": "document query selector all"
+	},
+	"console.log": {
+		"prefix": "cnsl",
+		"body": [
+			"console.log($1, '--- $1')"
+		],
+		"description": "console.log"
+	},
+	"add event listener": {
+		"prefix": "adel",
+		"body": [
+			"addEventListener('$1', $2)"
+		],
+		"description": "add event listener"
+	},
+	"logjs": {
+		"prefix": "logjs",
+		"body": [
+			"console.log(JSON.stringify($1, null, 4))"
+		],
+		"description": "logjs"
+	},
+	"jsc": {
+		"prefix": "jsc",
+		"body": [
+			"/*=====================================================",
+			"$1",
+			"======================================================*/"
+		],
+		"description": "notify element ui"
+	}
+}

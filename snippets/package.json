@@ -1,5 +1,5 @@
 {
-  "name": "user snippets",
+  "name": "snippets",
   "engines": {
     "vscode": "^1.11.0"
   },
@@ -16,6 +16,18 @@
       {
         "language": "php",
         "path": "./php.json"
+      },
+      {
+        "language": "css",
+        "path": "./css.json"
+      },
+      {
+        "language": "scss",
+        "path": "./css.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./js.json"
       }
     ]
   }
