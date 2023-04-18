@@ -25,6 +25,8 @@ return {
   },
   options = function(local_vim)
     local_vim.g.auto_save = 1
+    local_vim.opt.relativenumber = false
+    local_vim.opt.scrolloff=10
     return local_vim
   end,
   lsp = {
@@ -95,12 +97,12 @@ return {
     {
       "L3MON4D3/LuaSnip",
       config = function(plugin, opts)
-        require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
+        require "plugins.configs.luasnip" (plugin, opts)                                       -- include the default astronvim config that calls the setup call
         require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
       end,
       lazy = false
     },
-    {"Pocco81/auto-save.nvim", lazy = false}
+    { "Pocco81/auto-save.nvim", lazy = false }
   },
   cmp = {
     source_priority = {
@@ -113,7 +115,7 @@ return {
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
-  -- 
+  --
   polish = function()
     -- Set up custom filetypes
     -- vim.filetype.add {
