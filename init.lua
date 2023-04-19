@@ -25,6 +25,7 @@ return {
   },
   options = function(local_vim)
     local_vim.g.auto_save = 1
+    local_vim.g['sneak#label'] = 1
     local_vim.opt.relativenumber = false
     local_vim.opt.scrolloff = 10
     return local_vim
