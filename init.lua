@@ -25,6 +25,8 @@ return {
   },
   options = function(local_vim)
     local_vim.g['sneak#label'] = 1
+    
+    local_vim.g['copilot_no_tab_map'] = "v:true"
     local_vim.opt.relativenumber = false
     local_vim.opt.scrolloff = 10
     return local_vim
@@ -94,6 +96,7 @@ return {
     { "tpope/vim-fugitive", lazy = false },
     { "mattn/emmet-vim",    lazy = false },
     { "justinmk/vim-sneak", lazy = false },
+    {"github/copilot.vim", lazy = false},
     {
       "L3MON4D3/LuaSnip",
       config = function(plugin, opts)
