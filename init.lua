@@ -24,7 +24,6 @@ return {
     underline = true,
   },
   options = function(local_vim)
-    local_vim.g.auto_save = 1
     local_vim.g['sneak#label'] = 1
     local_vim.opt.relativenumber = false
     local_vim.opt.scrolloff = 10
@@ -35,7 +34,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true,    -- enable or disable format on save globally
+        enabled = false,    -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "scss",
         },
@@ -103,7 +102,6 @@ return {
       end,
       lazy = false
     },
-    { "Pocco81/auto-save.nvim", lazy = false }
   },
   cmp = {
     source_priority = {
