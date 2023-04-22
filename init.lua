@@ -101,6 +101,7 @@ return {
     { "mattn/emmet-vim",    lazy = false },
     { "justinmk/vim-sneak", lazy = false },
     {"github/copilot.vim", lazy = false},
+    {"mg979/vim-visual-multi", lazy = false},
     {
       "L3MON4D3/LuaSnip",
       config = function(plugin, opts)
