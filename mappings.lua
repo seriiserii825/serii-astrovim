@@ -13,7 +13,7 @@ return {
     },
   },
   i = {
-    ["<C-t"] = { "<cmd>copilot#Accept('<CR>')", desc = "copilot expand", silent = true },
+    ["<C-l>"] = { "copilot#Accept('\\<CR>')", desc = "copilot expand", silent = true, expr = true, script = true },
   },
 }
 
