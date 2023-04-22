@@ -13,6 +13,10 @@ return {
     },
   },
   i = {
-    ["<C-i"] = { "<Plug>copilot#Accept('<CR>')" }
-  }
+    ["<C-t"] = { "<cmd>copilot#Accept('<CR>')", desc = "copilot expand", silent = true },
+  },
 }
+
+
+-- imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+-- let g:copilot_no_tab_map = v:true
