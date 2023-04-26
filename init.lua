@@ -17,7 +17,8 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
+  colorscheme = "monokai_pro",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -101,6 +102,7 @@ return {
     { "justinmk/vim-sneak", lazy = false },
     {"github/copilot.vim", lazy = false},
     {"mg979/vim-visual-multi", lazy = false},
+    {"tanvirtin/monokai.nvim"},
     {
       "L3MON4D3/LuaSnip",
       config = function(plugin, opts)
