@@ -1,4 +1,4 @@
-return {
+local mappings =  {
   n = {
     ["b"] = { "<Plug>Sneak_S", desc = "Sneak back" },
     ["<M-l>"] = { ":wa<CR>", desc = "close all" },
@@ -13,10 +13,24 @@ return {
     },
   },
   i = {
-    ["<C-l>"] = { "copilot#Accept('\\<CR>')", desc = "copilot expand", silent = true, expr = true, script = true },
+    ['<C-l>'] = { 'copilot#Accept("\\<CR>")', desc = 'copilot expand', silent = true, expr = true, script = true },
   },
 }
+-- Функция для удаления непечатных символов
+local function removeNonPrintableChars(str)
+  return str:gsub("[%z\1-\31\127-\255]", "")
+end
 
+-- Удалить непечатные символы из значений таблицы mappings
+for _, mode in pairs(mappings) do
+  for _, mapping in pairs(mode) do
+    if type(mapping) == "table" and mapping.desc then
+      mapping.desc = removeNonPrintableChars(mapping.desc)
+    end
+  end
+end
+
+return mappings
 
 -- imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 -- let g:copilot_no_tab_map = v:true
