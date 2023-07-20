@@ -2,6 +2,7 @@ local mappings =  {
   n = {
     ["b"] = { "<Plug>Sneak_S", desc = "Sneak back" },
     ["<M-l>"] = { ":wa<CR>", desc = "close all" },
+    ["<leader>a"] = { ":w  <bar> %bd <bar> e# <bar> bd# <CR>", desc = "close other" },
     ["<leader>;"] = { ":vsplit<CR>", desc = "split" },
     ["<S-l>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
