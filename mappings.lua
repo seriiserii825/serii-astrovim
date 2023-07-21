@@ -1,7 +1,7 @@
 local mappings =  {
   n = {
     ["b"] = { "<Plug>Sneak_S", desc = "Sneak back" },
-    ["<M-l>"] = { ":wa<CR>", desc = "close all" },
+    ["<M-l>"] = { ":Format<CR>", desc = "Format" },
     ["<leader>a"] = { ":w  <bar> %bd <bar> e# <bar> bd# <CR>", desc = "close other" },
     ["<leader>;"] = { ":vsplit<CR>", desc = "split" },
     ["<S-l>"] = {
