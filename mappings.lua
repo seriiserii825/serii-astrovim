@@ -1,5 +1,6 @@
 local mappings =  {
   n = {
+    ["[n"] = { ":set relativenumber!<CR>", desc = "Toggle relativenumber" },
     ["b"] = { "<Plug>Sneak_S", desc = "Sneak back" },
     ["<M-l>"] = { ":Format<CR>", desc = "Format" },
     ["<leader>a"] = { ":w  <bar> %bd <bar> e# <bar> bd# <CR>", desc = "close other" },
